@@ -134,13 +134,15 @@ export default function CallForPapersPage() {
               cutting-edge work on artificial intelligence, agentic systems, and 
               next-generation networks.
             </p>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Submit Paper
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Link href="https://cmt3.research.microsoft.com/NEXTGENAIFORUM2027" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Submit Paper
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

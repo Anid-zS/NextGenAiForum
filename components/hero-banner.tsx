@@ -77,11 +77,11 @@ export function HeroBanner() {
           >
             <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
               <Calendar className="w-5 h-5 text-primary" />
-              <span className="text-foreground font-semibold">OCTOBER 26-27, 2026</span>
+              <span className="text-foreground font-semibold">APRIL 9-10, 2027</span>
             </div>
             <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-accent/10 border border-accent/20">
               <MapPin className="w-5 h-5 text-accent" />
-              <span className="text-foreground font-semibold">PARIS, FRANCE</span>
+              <span className="text-foreground font-semibold">BANGALORE, INDIA</span>
             </div>
           </motion.div>
 
