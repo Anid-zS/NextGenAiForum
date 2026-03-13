@@ -72,9 +72,7 @@ export function AgenticEraSection() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            At NextGenAIForum 2027, our mandate is to pioneer the shift from passive, 
-            rule-based infrastructures toward autonomous, self-optimizing agentic systems. 
-            Where technical innovation meets regulatory scrutiny.
+            At the NextGenAIForum 2027, our mandate is to pioneer the shift from passive, rule-based infrastructures to autonomous, self-optimizing agentic systems. We mandate the alignment of cutting-edge AI research with the 3GPP, ITU, and TSDSI standards. We provide a forum where technical breakthroughs meet regulatory scrutiny to ensure that innovation does not come at the cost of security or service reliability.
           </p>
         </motion.div>
 

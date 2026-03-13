@@ -4,40 +4,15 @@ import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { NeuralNetworkBg } from "@/components/neural-network-bg"
-import { Target, Handshake, Globe, Rocket, Building, HeartPulse, Shield, Satellite } from "lucide-react"
 
-const objectives = [
-  {
-    icon: Target,
-    title: "Premier Platform",
-    description:
-      "Establish an inclusive platform bringing together professionals, industry leaders, researchers, innovators, startups, and learners across all domains of AI and Machine Learning.",
-  },
-  {
-    icon: Handshake,
-    title: "Foster Collaboration",
-    description:
-      "Bridge the gap between academia, industry, and research institutions to accelerate AI innovation and deployment.",
-  },
-  {
-    icon: Globe,
-    title: "Global Networking",
-    description:
-      "Create networking opportunities for partnerships, research collaborations, and technology transfer on a global scale.",
-  },
-  {
-    icon: Rocket,
-    title: "Drive Innovation",
-    description:
-      "Enable knowledge exchange on AI innovation, deployment strategies, and emerging technologies across industries.",
-  },
-]
+const aboutSubMenus = [{ id: "about", label: "About" }]
 
-const applicationAreas = [
-  { icon: Building, label: "Telecommunications" },
-  { icon: HeartPulse, label: "Healthcare" },
-  { icon: Shield, label: "Defense" },
-  { icon: Satellite, label: "Space Technologies" },
+const objectivePoints = [
+  "Attract top professionals and organizations leveraging AI/ML in diverse industries.",
+  "Foster collaboration between academia, industry, and technology experts.",
+  "Enable knowledge exchange on emerging AI-driven innovations and real-world deployments.",
+  "Create networking and partnership opportunities for business growth and research advancement.",
+  "Serve as a unified ecosystem for working professionals, domain experts, enterprises, startups, and aspiring learners in the AI landscape.",
 ]
 
 export default function AboutPage() {
@@ -61,71 +36,64 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
               About{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                NextGenAIForum
+                NextGenAiForum
               </span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A strategic bridge between advanced AI research, industrial deployment, 
-              and global regulatory standards.
+              A strategic bridge between AI research, industry application, and global regulatory standards.
             </p>
           </motion.div>
+
+          <motion.nav
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            aria-label="About sub menu"
+            className="max-w-4xl mx-auto mt-8"
+          >
+            <div className="flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-border bg-card/40 p-3">
+              {aboutSubMenus.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="rounded-xl border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </motion.nav>
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="py-16 lg:py-24 bg-card/30">
+      {/* About Content */}
+      <section id="about" className="py-16 lg:py-24 bg-card/30 scroll-mt-28">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold font-display mb-6">
-                Our{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Vision
-                </span>
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  The NextGenAIForum annual international conference is envisioned as a 
-                  strategic bridge between advanced AI research, industrial deployment, 
-                  and global regulatory standards.
-                </p>
-                <p>
-                  Its objective is to move artificial intelligence beyond experimental 
-                  systems and integrate it into mission-critical infrastructure, ensuring 
-                  that breakthroughs maintain the highest standards of security, reliability, 
-                  and operational integrity.
-                </p>
-                <p>
-                  The forum acts as a marketplace for real-world problems and technical 
-                  solutions, creating opportunities for direct collaboration, technology 
-                  transfer, and scalable innovation.
-                </p>
-              </div>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/50 p-8 lg:p-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-8 text-foreground">
+              About NextGenAiForum
+            </h2>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              {applicationAreas.map((area, index) => (
-                <div
-                  key={area.label}
-                  className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
-                >
-                  <area.icon className="w-8 h-8 text-primary mb-3" />
-                  <span className="text-foreground font-medium">{area.label}</span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-base md:text-lg">
+              <p>
+                The NextGenAIForum annual international conference is envisioned as a high-level strategic bridge between cutting-edge AI research, industrial application, and global regulatory standards. Its primary purpose is to move AI out of the "black box" and into mission-critical infrastructure such as telecommunication, health, defense, space and so on. The forum acts as a marketplace for problems and solutions. Through "Industry Engagement," Government organizations, PSUs, and private tech giants present real-world challenges to the academic community, fostering direct collaboration and technology transfer.
+              </p>
+
+              <p>
+                Additionally, through various organizational units like Young Professionals (YP) and Women in Engineering (WiE) programs, the forum aims to mentor the next generation of leaders, ensuring a diverse and technically proficient workforce for the AI era.
+              </p>
+
+              <p>
+                For the Indian landscape a core purpose is to showcase and accelerate indigenous R&amp;D, reducing reliance on imported intellectual property for strategic technologies.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -139,82 +107,34 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-              Our{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Objectives
-              </span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Building a unified ecosystem for professionals, enterprises, startups, 
-              and future AI leaders.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Objective</h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {objectives.map((obj, index) => (
-              <motion.div
-                key={obj.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 lg:p-8 rounded-2xl bg-card/50 border border-border hover:border-primary/30 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <obj.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-                  {obj.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {obj.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* National Focus */}
-      <section className="py-16 lg:py-24 bg-card/30">
-        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto rounded-2xl border border-border bg-card/50 p-8 lg:p-12"
           >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-                National Strategic{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Focus
-                </span>
-              </h2>
-            </div>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+              To establish a premier and inclusive platform that brings together professionals, industry leaders, researchers, innovators, startups, and learners working across all domains of Artificial Intelligence and Machine Learning.
+            </p>
 
-            <div className="p-8 lg:p-12 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <p className="text-lg text-foreground leading-relaxed mb-6">
-                For the Indian ecosystem, the forum seeks to:
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Highlight indigenous AI research and innovation",
-                  "Accelerate national technology capability development",
-                  "Reduce dependence on imported intellectual property",
-                  "Strengthen sovereign AI infrastructure",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <p className="text-base md:text-lg text-foreground font-medium mb-4">
+              The NextGenAIForum aims to:
+            </p>
+
+            <ul className="space-y-3">
+              {objectivePoints.map((point) => (
+                <li key={point} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
+                  <span className="text-muted-foreground text-base md:text-lg">{point}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </section>

@@ -1,10 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, MapPin, ArrowRight } from "lucide-react"
+import { Calendar, MapPin } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 export function HeroBanner() {
   return (
@@ -57,14 +56,18 @@ export function HeroBanner() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center mb-6"
           >
-            <p className="text-xl md:text-2xl text-primary font-semibold mb-2">
-              6th International Conference on
-            </p>
+            <p className="text-base md:text-lg uppercase tracking-wide text-primary font-semibold mb-2">Home</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4">
-              Artificial Intelligence and Machine Learning
+              Next Generation Artificial Intelligence International Forum (NextGenAiForum 2027)
             </h2>
-            <p className="text-lg md:text-xl text-amber-600 font-medium">
-              Theme: Shaping the Next Era of AI Innovation, Responsibility Real-World Impact
+            <p className="text-lg md:text-xl text-amber-600 font-medium mb-3">
+              Theme: The Agentic Network: Generative AI, Standards, and Strategic Autonomy
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-2">
+              The "Strategic Gateway"- NextGenAIForum 2027: Defining the Agentic Network &amp; Strategic AI Autonomy.
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              The preeminent international conference converging Generative AI, 6G Orchestration, and Global Policy.
             </p>
           </motion.div>
 
@@ -77,11 +80,11 @@ export function HeroBanner() {
           >
             <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
               <Calendar className="w-5 h-5 text-primary" />
-              <span className="text-foreground font-semibold">APRIL 9-10, 2027</span>
+              <span className="text-foreground font-semibold">April 9 &ndash; 10, 2027</span>
             </div>
             <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-accent/10 border border-accent/20">
               <MapPin className="w-5 h-5 text-accent" />
-              <span className="text-foreground font-semibold">BANGALORE, INDIA</span>
+              <span className="text-foreground font-semibold">Bangalore - INDIA</span>
             </div>
           </motion.div>
 
