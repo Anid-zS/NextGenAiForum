@@ -2,17 +2,29 @@
 
 import { motion } from "framer-motion"
 import { Calendar, MapPin } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function HeroBanner() {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen min-h-[100svh] items-center justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero.jpeg"
+          alt="NextGenAIForum hero background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
+
       {/* Background Image Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background z-10" />
       
       {/* Decorative Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
