@@ -14,6 +14,18 @@ import {
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  {
+    label: "Committee",
+    items: [
+      { href: "/committee#steering-committee", label: "Steering Committee" },
+      { href: "/committee#executive-chair", label: "Executive Chair" },
+      { href: "/committee#general-co-chairs", label: "General Co-Chairs" },
+      {
+        href: "/committee#technical-program-committee",
+        label: "Technical Program Committee",
+      },
+    ],
+  },
   { href: "/program", label: "Program" },
   { href: "/speakers", label: "Speakers" },
   { href: "/call-for-papers", label: "Call for Papers" },
