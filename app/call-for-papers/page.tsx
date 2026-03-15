@@ -134,16 +134,34 @@ export default function CallForPapersPage() {
               cutting-edge work on artificial intelligence, agentic systems, and 
               next-generation networks.
             </p>
-            <Link href="https://cmt3.research.microsoft.com/NEXTGENAIFORUM2027" target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                Submit Paper
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="#ack-cmt">
+                <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
+                  Ack CMT
+                </Button>
+              </Link>
+              <Link href="https://cmt3.research.microsoft.com/NEXTGENAIFORUM2027" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  Submit Paper
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* CMT Acknowledgment */}
+      <section id="ack-cmt" className="pb-12">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto rounded-xl border border-border bg-card p-6">
+            <p className="text-foreground">
+              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            </p>
+          </div>
         </div>
       </section>
 
