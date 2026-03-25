@@ -140,7 +140,7 @@ export default function CallForPapersPage() {
                   Ack CMT
                 </Button>
               </Link>
-              <Link href="https://cmt3.research.microsoft.com/NEXTGENAIFORUM2027" target="_blank" rel="noopener noreferrer">
+              <Link href="https://cmt3.research.microsoft.com/NextGenAiForum2027/Submission/manage" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
