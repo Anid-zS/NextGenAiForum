@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import Image from "next/image"
 
 export function AgenticNetworkDiagram() {
   const ref = useRef(null)
@@ -41,66 +40,45 @@ export function AgenticNetworkDiagram() {
           className="max-w-5xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden bg-card border border-border shadow-2xl">
-            {/* Placeholder for the agentic network diagram */}
-            <div className="aspect-square md:aspect-video bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 md:p-12">
-              {/* This will be replaced with the actual diagram image */}
-              {/* <Image
-                src="/images/agentic-network-diagram.png"
-                alt="Agentic Network Architecture Diagram"
-                width={1200}
-                height={800}
-                className="w-full h-full object-contain"
-              /> */}
-              
-              {/* Placeholder diagram structure */}
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-3 mb-6">
-                    <div className="w-4 h-4 rounded-full bg-cyan-500 animate-pulse" />
-                    <span className="text-cyan-400 text-xs font-mono tracking-wider">NextGenAIForum</span>
+            <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-5 sm:p-8 md:p-10">
+              <div className="mx-auto max-w-4xl">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="w-3 h-3 rounded-full bg-cyan-500 animate-pulse" />
+                  <span className="text-cyan-400 text-xs font-mono tracking-wider">NextGenAIForum</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
+                  <div className="order-2 md:order-1 space-y-3">
+                    <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-center">
+                      <p className="text-cyan-400 text-xs sm:text-sm font-semibold">6G ORCHESTRATION</p>
+                    </div>
+                    <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-center">
+                      <p className="text-cyan-400 text-xs sm:text-sm font-semibold">AI STANDARDS</p>
+                    </div>
                   </div>
-                  
-                  <div className="relative">
-                    {/* Central Core */}
-                    <div className="relative z-10 w-48 h-48 md:w-64 md:h-64 mx-auto mb-8">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full border-2 border-cyan-500/50 flex items-center justify-center backdrop-blur-sm">
-                        <div className="text-center">
-                          <p className="text-cyan-400 text-sm md:text-base font-bold">AGENTIC</p>
-                          <p className="text-cyan-400 text-sm md:text-base font-bold">NETWORK CORE</p>
-                        </div>
-                      </div>
-                      
-                      {/* Orbiting elements */}
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-center">
-                        <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg backdrop-blur-sm">
-                          <p className="text-cyan-400 text-xs font-semibold whitespace-nowrap">6G ORCHESTRATION</p>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute top-1/2 -right-24 md:-right-32 -translate-y-1/2 text-center">
-                        <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg backdrop-blur-sm">
-                          <p className="text-cyan-400 text-xs font-semibold whitespace-nowrap">SOVEREIGN AI</p>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-center">
-                        <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg backdrop-blur-sm">
-                          <p className="text-cyan-400 text-xs font-semibold whitespace-nowrap">SDO POLICY LAYER</p>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute top-1/2 -left-24 md:-left-32 -translate-y-1/2 text-center hidden sm:block">
-                        <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg backdrop-blur-sm">
-                          <p className="text-cyan-400 text-xs font-semibold whitespace-nowrap">AI STANDARDS</p>
-                        </div>
+
+                  <div className="order-1 md:order-2">
+                    <div className="w-56 h-56 sm:w-64 sm:h-64 mx-auto rounded-full border-2 border-cyan-500/50 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <div className="text-center px-4">
+                        <p className="text-cyan-400 text-base sm:text-lg font-bold">AGENTIC</p>
+                        <p className="text-cyan-400 text-base sm:text-lg font-bold">NETWORK CORE</p>
                       </div>
                     </div>
                   </div>
-                  
-                  <p className="text-slate-400 text-sm mt-8">
-                    Converging Generative AI, 6G Networks & Global Policy
-                  </p>
+
+                  <div className="order-3 space-y-3">
+                    <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-center">
+                      <p className="text-cyan-400 text-xs sm:text-sm font-semibold">SOVEREIGN AI</p>
+                    </div>
+                    <div className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-center">
+                      <p className="text-cyan-400 text-xs sm:text-sm font-semibold">SDO POLICY LAYER</p>
+                    </div>
+                  </div>
                 </div>
+
+                <p className="text-slate-400 text-xs sm:text-sm text-center mt-6 md:mt-8">
+                  Converging Generative AI, 6G Networks & Global Policy
+                </p>
               </div>
             </div>
             
