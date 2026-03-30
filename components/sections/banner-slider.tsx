@@ -1,8 +1,8 @@
 "use client"
 
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import { ChevronLeft, ChevronRight, Brain, Network, Shield, Zap, Globe, Users } from "lucide-react"
+import { ChevronLeft, ChevronRight, Brain, Network } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const slides = [
@@ -17,30 +17,6 @@ const slides = [
     title: "6G Orchestration",
     description: "Discover how next-generation networks enable real-time AI coordination across distributed systems, powering tomorrow's infrastructure.",
     color: "from-purple-500 to-blue-500",
-  },
-  {
-    icon: Shield,
-    title: "Standards & Compliance",
-    description: "Alignment with 3GPP, ITU, and TSDSI ensures AI breakthroughs maintain the highest standards of security and operational integrity.",
-    color: "from-cyan-500 to-teal-500",
-  },
-  {
-    icon: Zap,
-    title: "Generative AI",
-    description: "From large language models to multimodal systems, explore the cutting edge of generative AI and its applications across industries.",
-    color: "from-orange-500 to-pink-500",
-  },
-  {
-    icon: Globe,
-    title: "Global Policy",
-    description: "Bridge the gap between technical innovation and regulatory frameworks, shaping policies that foster responsible AI development.",
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    icon: Users,
-    title: "Industry Collaboration",
-    description: "Connect with leading researchers, practitioners, and innovators shaping the future of artificial intelligence and machine learning.",
-    color: "from-indigo-500 to-purple-500",
   },
 ]
 
