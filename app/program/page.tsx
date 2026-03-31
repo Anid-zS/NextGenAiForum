@@ -312,16 +312,17 @@ export default function ProgramPage() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary font-medium mb-6">
               Conference Schedule
             </span>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Two days of keynotes, panels, workshops, and networking opportunities 
+              with world-leading AI researchers and industry pioneers.
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
               Program{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Schedule
               </span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Two days of keynotes, panels, workshops, and networking opportunities 
-              with world-leading AI researchers and industry pioneers.
-            </p>
           </motion.div>
         </div>
       </section>
