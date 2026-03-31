@@ -9,8 +9,8 @@ import { NeuralNetworkBg } from "@/components/neural-network-bg"
 type PastChair = {
   name: string
   role?: string
-  affiliation: string
-  years: string
+  affiliation?: string
+  years?: string
   image?: string
 }
 
@@ -99,8 +99,8 @@ export default function PastChairsPage() {
 
                 <h2 className="text-2xl font-display font-bold text-foreground">{chair.name}</h2>
                 {chair.role ? <p className="mt-1 text-lg text-muted-foreground">{chair.role}</p> : null}
-                <p className="mt-1 text-lg text-muted-foreground">{chair.affiliation}</p>
-                <p className="mt-1 text-lg text-muted-foreground">{chair.years}</p>
+                {chair.affiliation ? <p className="mt-1 text-lg text-muted-foreground">{chair.affiliation}</p> : null}
+                {chair.years ? <p className="mt-1 text-lg text-muted-foreground">{chair.years}</p> : null}
               </motion.article>
             ))}
           </motion.div>

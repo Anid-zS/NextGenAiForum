@@ -12,7 +12,7 @@ interface ExComMember {
   name: string
   role: string
   affiliation: string
-  image: string
+  image?: string
   linkedin?: string
 }
 
@@ -20,13 +20,13 @@ const excomMembers: ExComMember[] = [
   {
     name: "Dr. Navin Kumar",
     role: "Chair",
-    affiliation: "IISc Bangalore",
+    affiliation: "Professor, Amrita School of Engineering",
     image: "/site-images/ExCom_2026/Dr. Navin Kumar.jpeg",
   },
   {
     name: "Dr. Himani Saini",
     role: "Vice Chair",
-    affiliation: "IIIT Delhi",
+    affiliation: "ISRO Satellite Centre",
     image: "/site-images/ExCom_2026/Dr. Himani Saini.jpeg",
     linkedin: "https://www.linkedin.com/in/dr-himani-saini-b4950614/",
   },
@@ -34,178 +34,165 @@ const excomMembers: ExComMember[] = [
 
 const teamMembers: ExComMember[] = [
   {
-    name: "Dr Keerthi D S",
-    affiliation: "IIT Bangalore",
-    image: "/site-images/ExCom_2026/Dr Keerthi D S.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr Soma Pandey",
-    affiliation: "IIT Delhi",
-    image: "/site-images/ExCom_2026/Dr Soma Pandey.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Abhishek Appaji",
-    affiliation: "BMSCE",
-    image: "/site-images/ExCom_2026/Dr. Abhishek Appaji.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Basavaraj Patil",
-    affiliation: "MSRIT",
-    image: "/site-images/ExCom_2026/Dr. Basavaraj Patil.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Dilip R",
-    affiliation: "IIT Bombay",
-    image: "/site-images/ExCom_2026/Dr. Dilip R.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Ibrar Jahan M A",
-    affiliation: "JSSSTU",
-    image: "/site-images/ExCom_2026/Dr. Ibrar Jahan M A.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Javed G S",
-    affiliation: "Bangalore University",
-    image: "/site-images/ExCom_2026/Dr. Javed G S.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Jawed Qumar",
-    affiliation: "JNU",
-    image: "/site-images/ExCom_2026/Dr. Jawed Qumar.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. K.P. Lakshmi",
-    affiliation: "BMSCE",
-    image: "/site-images/ExCom_2026/Dr. K.P. Lakshmi.jpeg",
-    role: "ExCom Member",
+    name: "Dr. Nagamani K",
+    role: "Treasurer",
+    affiliation: "RVCE",
+    image: "/site-images/ExCom_2026/Dr. Nagamani K.jpeg",
   },
   {
     name: "Dr. Karthik P",
-    affiliation: "NMIT",
+    role: "Secretary",
+    affiliation: "Cambridge Institute of Technology",
     image: "/site-images/ExCom_2026/Dr. Karthik P.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Madhu B M",
-    affiliation: "Ramaiah Institute",
-    image: "/site-images/ExCom_2026/Dr. Madhu B M.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Madhusudhan Nadgir",
-    affiliation: "BMS College",
-    image: "/site-images/ExCom_2026/Dr. Madhusudhan Nadgir.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Nagamani K",
-    affiliation: "RVCE",
-    image: "/site-images/ExCom_2026/Dr. Nagamani K.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Parimala P",
-    affiliation: "SJCE",
-    image: "/site-images/ExCom_2026/Dr. Parimala P.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Preeta Saran",
-    affiliation: "IGDTUW",
-    image: "/site-images/ExCom_2026/Dr. Preeta Saran.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. R Venkatesha",
-    affiliation: "KSIT",
-    image: "/site-images/ExCom_2026/Dr. R Venkatesha.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Rajesh N",
-    affiliation: "JSS Academy",
-    image: "/site-images/ExCom_2026/Dr. Rajesh N.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Ravishankar Holla",
-    affiliation: "Manipal Institute",
-    image: "/site-images/ExCom_2026/Dr. Ravishankar Holla.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Sankar Prasad Bag",
-    affiliation: "Kolkata",
-    image: "/site-images/ExCom_2026/Dr. Sankar Prasad Bag.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Shashidhar R",
-    affiliation: "RVCE",
-    image: "/site-images/ExCom_2026/Dr. Shashidhar R.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Sheshaprasad N",
-    affiliation: "RVCE",
-    image: "/site-images/ExCom_2026/Dr. Sheshaprasad N.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Shobha K R",
-    affiliation: "MSRIT",
-    image: "/site-images/ExCom_2026/Dr. Shobha K R.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Sumit Soman",
-    affiliation: "Samsung (SRIB)",
-    image: "/site-images/ExCom_2026/Dr. Sumit Soman.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Dr. Venugopal N",
-    affiliation: "IISC Bangalore",
-    image: "/site-images/ExCom_2026/Dr. Venugopal N.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Mr. Kaushik Nanda",
-    affiliation: "Industry",
-    image: "/site-images/ExCom_2026/Mr. Kaushik Nanda.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Mr. Sundaresan",
-    affiliation: "Industry",
-    image: "/site-images/ExCom_2026/Mr. Sundaresan.jpeg",
-    role: "ExCom Member",
-  },
-  {
-    name: "Mrs. Shubha Kumari K",
-    affiliation: "SENSORS Bangalore",
-    image: "/site-images/ExCom_2026/Mrs. Shubha Kumari K.jpeg",
-    role: "ExCom Member",
   },
   {
     name: "Ms. Ambika",
-    affiliation: "Participant",
+    role: "Lead, Technical Activities",
+    affiliation: "Technical Activities",
     image: "/site-images/ExCom_2026/Ms. Ambika.jpeg",
-    role: "ExCom Member",
   },
   {
-    name: "Santhosh Kumar D R",
-    affiliation: "University",
-    image: "/site-images/ExCom_2026/Santhosh Kumar D R Univ.jpeg",
+    name: "Dr. Javed G S",
+    role: "Lead, Membership Activities",
+    affiliation: "Membership Activities",
+    image: "/site-images/ExCom_2026/Dr. Javed G S.jpeg",
+  },
+  {
+    name: "Dr. Dilip R",
+    role: "Joint Secretary",
+    affiliation: "SJB Institute of Technology, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Dilip R.jpeg",
+  },
+  {
+    name: "Dr. Basavaraj Patil",
+    role: "Joint Treasurer",
+    affiliation: "RV University, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Basavaraj Patil.jpeg",
+  },
+  {
+    name: "Dr. Abhishek Appaji",
+    role: "Joint Treasurer",
+    affiliation: "RV University, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Abhishek Appaji.jpeg",
+  },
+  {
+    name: "Dr. Parimala P",
     role: "ExCom Member",
+    affiliation: "Ramaiah Institute of Technology, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Parimala P.jpeg",
+  },
+  {
+    name: "Dr. Ibrar Jahan M A",
+    role: "ExCom Member",
+    affiliation: "RNS Institute of Technology, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Ibrar Jahan M A.jpeg",
+  },
+  {
+    name: "Dr. Ravishankar Holla",
+    role: "ExCom Member",
+    affiliation: "RV College of Engineering, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Ravishankar Holla.jpeg",
+  },
+  {
+    name: "Dr. Sheshaprasad N",
+    role: "ExCom Member",
+    affiliation: "BNMIT, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Sheshaprasad N.jpeg",
+  },
+  {
+    name: "Dr. Madhu B M",
+    role: "ExCom Member",
+    affiliation: "Siddaganga Institute of Technology, Tumakuru",
+    image: "/site-images/ExCom_2026/Dr. Madhu B M.jpeg",
+  },
+  {
+    name: "Dr Keerthi D S",
+    role: "ExCom Member",
+    affiliation: "Malnad College of Engineering, Hassan",
+    image: "/site-images/ExCom_2026/Dr Keerthi D S.jpeg",
+  },
+  {
+    name: "Mrs. Shubha Kumari K",
+    role: "ExCom Member",
+    affiliation: "Larsen & Toubro Precision Engineering",
+    image: "/site-images/ExCom_2026/Mrs. Shubha Kumari K.jpeg",
+  },
+  {
+    name: "Mr. Sundaresan",
+    role: "ExCom Member",
+    affiliation: "Poovalingam Infosys",
+    image: "/site-images/ExCom_2026/Mr. Sundaresan.jpeg",
+  },
+  {
+    name: "Santhosh Kumar D R Univ",
+    role: "ExCom Member",
+    affiliation: "BDT College of Engineering",
+    image: "/site-images/ExCom_2026/Santhosh Kumar D R Univ.jpeg",
+  },
+  {
+    name: "Dr. Sankar Prasad Bag",
+    role: "ExCom Member",
+    affiliation: "REVA University, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Sankar Prasad Bag.jpeg",
+  },
+  {
+    name: "Dr. R Venkatesha",
+    role: "ExCom Member",
+    affiliation: "Prasad TuDelft",
+    image: "/site-images/ExCom_2026/Dr. R Venkatesha.jpeg",
+  },
+  {
+    name: "Dr. Jawed Qumar",
+    role: "ExCom Member",
+    affiliation: "DRDO, BANGALORE",
+    image: "/site-images/ExCom_2026/Dr. Jawed Qumar.jpeg",
+  },
+  {
+    name: "Mr. Kaushik Nanda",
+    role: "ExCom Member",
+    affiliation: "C-DAC Bangalore",
+    image: "/site-images/ExCom_2026/Mr. Kaushik Nanda.jpeg",
+  },
+  {
+    name: "Dr. Preeta Saran",
+    role: "ExCom Member",
+    affiliation: "The Oxford College of Engineering",
+    image: "/site-images/ExCom_2026/Dr. Preeta Saran.jpeg",
+  },
+  {
+    name: "Dr Soma Pandey",
+    role: "ExCom Member",
+    affiliation: "Reliance Jio",
+    image: "/site-images/ExCom_2026/Dr Soma Pandey.jpeg",
+  },
+  {
+    name: "Dr. Venugopal N",
+    role: "ExCom Member",
+    affiliation: "PES University, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Venugopal N.jpeg",
+  },
+  {
+    name: "Dr. Madhusudhan Nadgir",
+    role: "ExCom Member",
+    affiliation: "Nadgir Polytechnic, Bengaluru",
+    image: "/site-images/ExCom_2026/Dr. Madhusudhan Nadgir.jpeg",
+  },
+  {
+    name: "Dr. Rajesh N",
+    role: "ExCom Member",
+    affiliation: "Nitte Meenakshi Institute of Technology",
+    image: "/site-images/ExCom_2026/Dr. Rajesh N.jpeg",
+  },
+  {
+    name: "Dr. S G Shivaprasad Yadav",
+    role: "ExCom Member",
+    affiliation: "MSRIT",
+  },
+  {
+    name: "Dr. Shashidhar R",
+    role: "ExCom Member",
+    affiliation: "JSS Science and Technology University",
+    image: "/site-images/ExCom_2026/Dr. Shashidhar R.jpeg",
   },
 ]
 
@@ -256,14 +243,18 @@ export default function ExComPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   
                   <div className="relative space-y-4">
-                    <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                    {member.image ? (
+                      <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-32 h-32 mx-auto rounded-full border-2 border-dashed border-primary/35 bg-primary/10" />
+                    )}
                     
                     <div className="text-center">
                       <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
@@ -318,17 +309,22 @@ export default function ExComPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   
                   <div className="relative space-y-4">
-                    <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                    {member.image ? (
+                      <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-24 h-24 mx-auto rounded-full border-2 border-dashed border-primary/35 bg-primary/10" />
+                    )}
                     
                     <div className="text-center">
                       <h3 className="text-sm font-bold text-foreground leading-tight">{member.name}</h3>
+                      <p className="text-xs font-semibold text-primary mt-1">{member.role}</p>
                       <p className="text-xs text-muted-foreground mt-2">{member.affiliation}</p>
                     </div>
 
