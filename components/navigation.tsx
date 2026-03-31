@@ -17,6 +17,8 @@ const navItems = [
   {
     label: "Committee",
     items: [
+      { href: "/excoms", label: "ExCom 2026" },
+      { href: "/past-chairs", label: "Past Chairs" },
       { href: "/committee#steering-committee", label: "Steering Committee" },
       { href: "/committee#executive-chair", label: "Executive Chair" },
       { href: "/committee#general-co-chairs", label: "General Co-Chairs" },

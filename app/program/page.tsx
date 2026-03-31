@@ -322,6 +322,11 @@ export default function ProgramPage() {
               Two days of keynotes, panels, workshops, and networking opportunities 
               with world-leading AI researchers and industry pioneers.
             </p>
+            <div className="mt-6 flex justify-center">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-sm text-amber-500 font-medium">
+                ⚠️ Tentative Schedule - Under Construction
+              </span>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -437,7 +442,7 @@ export default function ProgramPage() {
           >
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold font-display mb-3">
-                Program Menu
+                Program (Conference Events)
               </h2>
               <p className="text-muted-foreground">
                 Explore the full set of symposium tracks, industry activities,
