@@ -17,6 +17,7 @@ const navItems = [
   {
     label: "Committee",
     items: [
+      { href: "/committee#core-committee", label: "Core Committee" },
       { href: "/committee#steering-committee", label: "Steering Committee" },
       { href: "/committee#executive-chair", label: "Executive Chair" },
       { href: "/committee#general-co-chairs", label: "General Co-Chairs" },
