@@ -9,37 +9,35 @@ import { ArrowUpRight, Users } from "lucide-react"
 
 const coreCommitteeMembers = [
   {
-    name: "Navin Kumar",
-    designation: "Core Committee Member",
+    name: "Navin Kumar, PhD",
+    designation: "Professor and Chairman, ECE Dept.\nAmrita School of Engineering Bangalore",
     image: "/site-images/Core-Committee/Navin Kumar.jpeg",
     linkedin: "https://www.linkedin.com/in/navinkumar21india/",
   },
   {
-    name: "Sudhir Patnaik",
-    designation: "Core Committee Member",
-    image: "/site-images/Core-Committee/Sudhir-Patnaik.jpeg",
-    linkedin: "https://www.linkedin.com/in/sudhirpatnaik/",
-  },
-  {
-    name: "Sunil Vuppala",
-    designation: "Core Committee Member",
-    image: "/site-images/Core-Committee/Sunil Vuppala.png",
-    linkedin: "https://www.linkedin.com/in/sunilvuppala/",
-  },
-  {
-    name: "Madhan Kanagarathinam",
-    designation: "Core Committee Member",
+    name: "Madhan Raj Kanagarathinam",
+    designation: "Architect, Samsung Electronics",
     image: "/site-images/Core-Committee/madhan-kanagarathinam.jpeg",
     linkedin: "https://www.linkedin.com/in/madhanrajk/",
   },
   {
-    name: "Muzammil Pasa",
-    designation: "Core Committee Member",
+    name: "Dr. Sunil Kumar Vuppala",
+    designation: "AI Partner, ArisGlobal",
+    image: "/site-images/Core-Committee/Sunil Vuppala.png",
+    linkedin: "https://www.linkedin.com/in/sunilvuppala/",
+  },
+  {
+    name: "Sudhir Kumar Patnaik, PhD",
+    designation: "Professor and Centre Director-CIR (Bangalore)\nAmrita Vishwa Vidyapeetham",
+    image: "/site-images/Core-Committee/Sudhir-Patnaik.jpeg",
+    linkedin: "https://www.linkedin.com/in/sudhirpatnaik/",
+  },
+  {
+    name: "Muzammil Pasha",
+    designation: "Secretary, IEEE Bangalore Young Professionals",
     image: "/site-images/Core-Committee/Muzammil-Pasa.jpeg",
     linkedin: "https://www.linkedin.com/in/muzammil-pasha28/",
   },
-  
-  
 ]
 
 const committeeSections = [
@@ -223,10 +221,14 @@ export default function CommitteePage() {
                               />
                             </div>
                             <div className="p-5">
-                              <h3 className="text-lg font-semibold font-display text-foreground">
-                                {member.name}
-                              </h3>
-                              <p className="mt-1 text-sm text-muted-foreground">{member.designation}</p>
+                              <div className="flex flex-col items-center text-center">
+                                <h3 className="text-lg font-semibold font-display text-foreground">
+                                  {member.name}
+                                </h3>
+                                <div className="mt-1 w-full rounded-lg bg-primary/5 border border-primary/10 px-3 py-2 text-sm text-muted-foreground font-medium whitespace-pre-line">
+                                  {member.designation}
+                                </div>
+                              </div>
                               <a
                                 href={member.linkedin}
                                 target="_blank"
