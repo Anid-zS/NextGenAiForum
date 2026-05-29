@@ -21,6 +21,12 @@ const coreCommitteeMembers = [
     linkedin: "https://www.linkedin.com/in/madhanrajk/",
   },
   {
+    name: "Chengappa Munjandira",
+    designation: "Telco Core & Cloud-Native Architect, HPE",
+    image: "/site-images/Core-Committee/Chengappa-Munjandira.jpg",
+    linkedin: "https://www.linkedin.com/in/chengappa-munjandira/",
+  },
+  {
     name: "Dr. Sunil Kumar Vuppala",
     designation: "AI Partner, ArisGlobal",
     image: "/site-images/Core-Committee/Sunil Vuppala.png",
@@ -210,9 +216,9 @@ export default function CommitteePage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: memberIndex * 0.06 }}
-                            className="overflow-hidden rounded-2xl border border-border bg-background/85"
+                            className="overflow-hidden rounded-2xl border border-border bg-background/85 flex flex-col"
                           >
-                            <div className="relative aspect-square">
+                              <div className="relative aspect-square">
                               <Image
                                 src={member.image}
                                 alt={member.name}
@@ -220,8 +226,8 @@ export default function CommitteePage() {
                                 className="object-cover"
                               />
                             </div>
-                            <div className="p-5">
-                              <div className="flex flex-col items-center text-center">
+                              <div className="p-5 flex flex-col justify-between h-full">
+                                <div className="flex flex-col items-center text-center">
                                 <h3 className="text-lg font-semibold font-display text-foreground">
                                   {member.name}
                                 </h3>
@@ -229,17 +235,17 @@ export default function CommitteePage() {
                                   {member.designation}
                                 </div>
                               </div>
-                              <a
-                                href={member.linkedin}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="mt-4 inline-flex items-center gap-2 rounded-lg border border-primary/25 bg-primary/10 px-3 py-2 text-sm font-medium text-primary transition-colors hover:border-primary/40 hover:bg-primary/15"
-                              >
-                                <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-primary/15 text-[10px] font-bold uppercase">
-                                  in
-                                </span>
-                                <span>LinkedIn</span>
-                              </a>
+                                <a
+                                  href={member.linkedin}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="mt-4 inline-flex self-center items-center gap-2 rounded-lg border border-primary/25 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary transition-colors hover:border-primary/40 hover:bg-primary/15 max-w-max"
+                                >
+                                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-primary/15 text-[10px] font-bold uppercase">
+                                    in
+                                  </span>
+                                  <span>LinkedIn</span>
+                                </a>
                             </div>
                           </motion.article>
                         ))}
