@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import { NeuralNetworkBg } from '@/components/neural-network-bg'
 import { buildMetadata, siteMetadata } from '@/lib/metadata'
 
 const spaceGrotesk = Space_Grotesk({ 
@@ -81,11 +82,6 @@ export const metadata: Metadata = {
         type: 'image/png',
         sizes: '180x180',
       },
-      {
-        url: '/apple-icon.png',
-        type: 'image/png',
-        sizes: '180x180',
-      },
     ],
     shortcut: '/favicon.ico',
   },
@@ -99,6 +95,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-sans antialiased bg-background text-foreground`}>
+        <NeuralNetworkBg />
         {children}
         <Analytics />
       </body>

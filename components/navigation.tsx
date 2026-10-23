@@ -84,7 +84,7 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) =>
-              "items" in item ? (
+              item.items ? (
                 <DropdownMenu key={item.label}>
                   <DropdownMenuTrigger asChild>
                     <Button
@@ -127,7 +127,7 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <Link href="/registration">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
-                Register Now
+                Registration Info
               </Button>
             </Link>
           </div>
@@ -137,6 +137,9 @@ export function Navigation() {
             variant="ghost"
             size="icon"
             className="lg:hidden"
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -149,10 +152,10 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl">
+          <div id="mobile-navigation" className="lg:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto py-4 border-t border-border bg-background/95 backdrop-blur-xl">
             <div className="flex flex-col gap-2">
               {navItems.map((item) =>
-                "items" in item ? (
+                item.items ? (
                   <div key={item.label} className="space-y-1">
                     <span className="px-4 py-2 text-sm font-medium text-muted-foreground">
                       {item.label}
@@ -182,7 +185,7 @@ export function Navigation() {
               <div className="px-4 pt-4">
                 <Link href="/registration" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Register Now
+                    Registration Info
                   </Button>
                 </Link>
               </div>

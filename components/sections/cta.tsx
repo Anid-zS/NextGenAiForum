@@ -63,7 +63,7 @@ export function CTASection() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-8 group"
               >
-                Register Now
+                Registration Info
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

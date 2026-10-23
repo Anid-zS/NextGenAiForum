@@ -78,9 +78,8 @@ export function HeroBanner() {
             transition={{ duration: 0.6 }}
             className="flex justify-center mb-8"
           >
-            <div className="relative w-full max-w-md h-48 lg:h-56">
-              {/* Placeholder for logo - will be replaced with actual conference logo */}
-              <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-full max-w-md">
+              <div className="flex items-center justify-center">
                 <div className="text-center">
                   <div className="inline-flex items-center gap-3 mb-4">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-xl">
@@ -152,15 +151,7 @@ export function HeroBanner() {
                 size="lg"
                 className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
               >
-                Download Brochure
-              </Button>
-            </Link>
-            <Link href="/registration">
-              <Button
-                size="lg"
-                className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
-              >
-                Register Now
+                Registration Info
               </Button>
             </Link>
             <Link href="/call-for-papers">
@@ -168,7 +159,7 @@ export function HeroBanner() {
                 size="lg"
                 className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
               >
-                Submit Abstract
+                Submit a Paper
               </Button>
             </Link>
             <Link href="/venue">
@@ -177,14 +168,6 @@ export function HeroBanner() {
                 className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
               >
                 Venue
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 shadow-lg hover:shadow-xl transition-all"
-              >
-                Past Conferences
               </Button>
             </Link>
           </motion.div>

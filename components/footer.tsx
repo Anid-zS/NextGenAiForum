@@ -112,18 +112,6 @@ export function Footer() {
             © 2027 NextGenAIForum. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              Terms of Service
-            </Link>
             <a
               href="https://www.teyzsec.com/"
               target="_blank"

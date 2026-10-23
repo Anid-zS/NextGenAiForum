@@ -1,4 +1,3 @@
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Navigation } from "@/components/navigation"
 import { HeroBanner } from "@/components/hero-banner"
 import { BannerSlider } from "@/components/sections/banner-slider"
@@ -12,7 +11,6 @@ import { Footer } from "@/components/footer"
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
       <HeroBanner />
       <AgenticNetworkDiagram />

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 
 const aboutSubMenus = [{ id: "about", label: "About" }]
 
@@ -18,7 +17,6 @@ const objectivePoints = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}

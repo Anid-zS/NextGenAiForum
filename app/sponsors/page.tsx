@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -66,21 +65,18 @@ const partnerCategories = [
     title: "Industry Partners",
     description:
       "Technology companies, enterprises, and organizations supporting AI innovation.",
-    placeholders: ["Partner logos will be displayed here"],
   },
   {
     icon: GraduationCap,
     title: "Academic Partners",
     description:
       "Universities, research institutions, and academic organizations.",
-    placeholders: ["Academic partner logos will be displayed here"],
   },
   {
     icon: Landmark,
     title: "Government Partners",
     description:
       "Government agencies, PSUs, and regulatory bodies supporting AI development.",
-    placeholders: ["Government partner logos will be displayed here"],
   },
 ]
 
@@ -88,7 +84,7 @@ const sponsorshipBenefits = [
   {
     icon: Megaphone,
     title: "Brand Visibility",
-    description: "Reach thousands of AI professionals, researchers, and decision-makers.",
+    description: "Connect with AI professionals, researchers, and decision-makers.",
   },
   {
     icon: Users,
@@ -98,7 +94,7 @@ const sponsorshipBenefits = [
   {
     icon: Globe,
     title: "Global Reach",
-    description: "Position your brand in front of an international audience from 50+ countries.",
+    description: "Share your work with an international research and industry audience.",
   },
   {
     icon: Award,
@@ -110,7 +106,6 @@ const sponsorshipBenefits = [
 export default function SponsorsPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}
@@ -273,14 +268,13 @@ export default function SponsorsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-bold font-display mb-4">
-              Our{" "}
+              Partnership{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Partners
+                Opportunities
               </span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Partner announcements coming soon. Join leading organizations 
-              supporting NextGenAIForum 2027.
+              Explore ways your organization can support NextGenAIForum 2027.
             </p>
           </motion.div>
 
@@ -303,11 +297,7 @@ export default function SponsorsPage() {
                 <p className="text-sm text-muted-foreground mb-6">
                   {category.description}
                 </p>
-                <div className="aspect-[3/1] rounded-lg bg-muted/50 border border-border flex items-center justify-center">
-                  <p className="text-xs text-muted-foreground">
-                    {category.placeholders[0]}
-                  </p>
-                </div>
+                <Link href="/contact" className="text-sm text-primary underline underline-offset-4">Discuss a partnership</Link>
               </motion.div>
             ))}
           </div>

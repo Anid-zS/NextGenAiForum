@@ -18,22 +18,40 @@ export function NeuralNetworkBg() {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext("2d", { alpha: false })
     if (!ctx) return
 
     let animationId: number
     let nodes: Node[] = []
     let width = 0
     let height = 0
-    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2)
+    let pixelRatio = 0
+    const backgroundColor = getComputedStyle(document.body).backgroundColor
 
     const resize = () => {
-      width = window.innerWidth
-      height = window.innerHeight
+      const nextWidth = window.innerWidth
+      const nextHeight = window.innerHeight
+      const nextPixelRatio = Math.min(window.devicePixelRatio || 1, 2)
+      if (width === nextWidth && height === nextHeight && pixelRatio === nextPixelRatio) return
+
+      const previousWidth = width
+      const previousHeight = height
+      width = nextWidth
+      height = nextHeight
+      pixelRatio = nextPixelRatio
       canvas.width = Math.round(width * pixelRatio)
       canvas.height = Math.round(height * pixelRatio)
       ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
-      initNodes()
+      if (previousWidth && previousHeight) {
+        nodes.forEach((node) => {
+          node.x *= width / previousWidth
+          node.y *= height / previousHeight
+        })
+      } else {
+        initNodes()
+      }
+      // Resizing clears the buffer; paint before the browser can display it.
+      drawFrame(performance.now())
     }
 
     const initNodes = () => {
@@ -95,8 +113,11 @@ export function NeuralNetworkBg() {
       ctx.stroke()
     }
 
-    const animate = (time: number) => {
-      ctx.clearRect(0, 0, width, height)
+    const drawFrame = (time: number) => {
+      ctx.globalAlpha = 1
+      ctx.fillStyle = backgroundColor
+      ctx.fillRect(0, 0, width, height)
+      ctx.globalAlpha = 0.6
 
       const maxDistance = 150
 
@@ -129,6 +150,10 @@ export function NeuralNetworkBg() {
         drawNode(node, time)
       })
 
+    }
+
+    const animate = (time: number) => {
+      drawFrame(time)
       animationId = requestAnimationFrame(animate)
     }
 
@@ -146,7 +171,7 @@ export function NeuralNetworkBg() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 -z-10 opacity-60"
+      className="pointer-events-none fixed inset-0 -z-10 h-full w-full bg-background"
       aria-hidden="true"
     />
   )

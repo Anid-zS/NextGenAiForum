@@ -3,49 +3,17 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
   MapPin,
   Plane,
-  Hotel,
   Car,
   Train,
   Globe,
   Calendar,
   ArrowRight,
 } from "lucide-react"
-
-const accommodations = [
-  {
-    category: "Luxury Hotels",
-    hotels: [
-      "The Ritz-Carlton, Bangalore",
-      "The Leela Palace",
-      "JW Marriott Hotel Bengaluru",
-      "ITC Gardenia",
-    ],
-  },
-  {
-    category: "Business Hotels",
-    hotels: [
-      "Taj MG Road",
-      "Sheraton Grand Bangalore",
-      "Conrad Bengaluru",
-      "The Oberoi",
-    ],
-  },
-  {
-    category: "Mid-Range Options",
-    hotels: [
-      "Novotel Bengaluru",
-      "Hyatt Centric MG Road",
-      "Holiday Inn Express",
-      "ibis Bengaluru City Centre",
-    ],
-  },
-]
 
 const travelInfo = [
   {
@@ -71,7 +39,6 @@ const travelInfo = [
 export default function VenuePage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}
@@ -103,7 +70,7 @@ export default function VenuePage() {
       {/* Venue Details */}
       <section className="py-16 bg-card/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -147,30 +114,13 @@ export default function VenuePage() {
               <div className="mt-8">
                 <Link href="/registration">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Register Now
+                    Registration Info
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>
             </motion.div>
 
-            {/* Map placeholder */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="aspect-[4/3] rounded-2xl bg-card border border-border overflow-hidden"
-            >
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 text-primary/30 mx-auto mb-4" />
-                  <p className="text-muted-foreground">
-                    Interactive map will be available soon
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -222,66 +172,6 @@ export default function VenuePage() {
         </div>
       </section>
 
-      {/* Accommodation */}
-      <section className="py-16 lg:py-24 bg-card/30">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold font-display mb-4">
-              <Hotel className="w-8 h-8 text-primary inline mr-3" />
-              Accommodation{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Options
-              </span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Bangalore offers a wide range of accommodation options to suit 
-              every budget. Here are some recommended hotels near the venue.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {accommodations.map((category, index) => (
-              <motion.div
-                key={category.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-xl bg-card border border-border"
-              >
-                <h3 className="text-lg font-display font-semibold text-foreground mb-4">
-                  {category.category}
-                </h3>
-                <ul className="space-y-2">
-                  {category.hotels.map((hotel, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      {hotel}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center text-sm text-muted-foreground mt-8"
-          >
-            Special conference rates may be available at partner hotels. 
-            Details will be announced closer to the event.
-          </motion.p>
-        </div>
-      </section>
 
       <Footer />
     </main>

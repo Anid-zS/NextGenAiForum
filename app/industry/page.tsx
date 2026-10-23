@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -97,7 +96,6 @@ const collaborationProcess = [
 export default function IndustryPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}

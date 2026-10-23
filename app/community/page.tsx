@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -74,7 +73,6 @@ const wieBenefits = [
 export default function CommunityPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}
@@ -290,7 +288,9 @@ export default function CommunityPage() {
                 conference and so on.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Look for more details on this page.
+                <Link href="/contact" className="text-primary underline underline-offset-4">
+                  Contact the organizers about student participation and volunteering.
+                </Link>
               </p>
             </div>
           </motion.div>

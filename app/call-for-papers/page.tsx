@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -99,7 +98,7 @@ const importantDates = [
 const submissionGuidelines = [
   "Papers must be original and not simultaneously submitted to another venue",
   "Maximum 8 pages for full papers, 4 pages for short papers",
-  "Use the provided LaTeX or Word template",
+  "Contact the program team for the required LaTeX or Word template",
   "Double-blind review process - anonymize your submission",
   "Include an abstract of no more than 250 words",
   "PDF format only",
@@ -108,7 +107,6 @@ const submissionGuidelines = [
 export default function CallForPapersPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}

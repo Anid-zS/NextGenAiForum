@@ -3,13 +3,11 @@
 import { motion } from "framer-motion"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { NeuralNetworkBg } from "@/components/neural-network-bg"
 import { Mail } from "lucide-react"
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      <NeuralNetworkBg />
       <Navigation />
 
       {/* Hero */}
@@ -57,7 +55,7 @@ export default function ContactPage() {
             >
               navinkumar@ieee.org
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
 
